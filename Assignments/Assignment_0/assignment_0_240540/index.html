@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> My website</title>
+  <link rel="stylesheet" href="spreadsheet.css">
+</head>
+<body>
+  <div class="box">
+    <div class="greeting" id="greetingtext">loading...</div>
+    <div class="datetime" id="datetimetext"></div>
+  </div>
+  <main class="box1">
+    <h1>About Me</h1>
+    <h2>Name: Deepika</h2>
+    <div class="image"></div>
+    
+    <p class="intro">
+      I'm currently studying at IIT Kanpur as a B.Tech student in the Electrical Engineering department. I'm interested in web development.
+    </p>
+
+    <h3>My Skills:</h3>
+    <ul class="skills">
+      <li>Python</li>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+
+    <section class="hobbies">
+      <h3>My Hobbies:</h3>
+      <div class="title">
+        <div id="title1">Sketching</div>
+        <div id="title2">Photography</div>
+        <div id="title3">Reading</div>
+      </div>
+    </section>
+
+    <div class="info">
+      For any further information: <a href="https://example.com">Contact me</a>
+    </div>
+  </main>
+  <script>
+    function updateDateTime() {
+      const now = new Date();
+      const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                          'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+      const day = dayNames[now.getDay()];
+      const date = now.getDate();
+      const month = monthNames[now.getMonth()];
+      const year = now.getFullYear();
+
+      const hours = String(now.getHours()).padStart(2, '0');
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+
+      const time = `${hours}:${minutes}`;
+      const fullDate = `${day}, ${month} ${date}, ${year}`;
+
+      document.getElementById('datetimetext').textContent = `${fullDate} | ${time}`;
+    }
+
+    function setGreetingAndBackground() {
+      const greeting = document.getElementById('greetingtext');
+      const hour = new Date().getHours();
+      const body = document.body;
+
+      if (hour >= 5 && hour < 12) {
+        greeting.textContent = "Good Morning!";
+        body.style.backgroundImage = "url('morning2.jpg')";
+      } else if (hour >= 12 && hour < 18) {
+        greeting.textContent = "Good Afternoon!";
+        body.style.backgroundImage = "url('afternoon.jpg')";
+      } else if (hour >= 18 && hour < 21) {
+        greeting.textContent = "Good Evening!";
+        body.style.backgroundImage = "url('evening.jpg')";
+      } else {
+        greeting.textContent = "Good Evening!";
+        body.style.backgroundImage = "url('night2.jpg')";
+      }
+    }
+    setGreetingAndBackground();
+    updateDateTime();
+</script>
+
+</body>
+</html>
