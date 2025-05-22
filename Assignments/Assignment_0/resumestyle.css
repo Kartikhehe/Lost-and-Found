@@ -1,0 +1,230 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and general styling */
+body {
+  font-family:Arial, Helvetica, sans-serif;
+  background: linear-gradient(to bottom, #eaa4de, #fff);
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Header Section */
+header {
+  position: relative;
+  text-align: center;
+  padding: 50px 20px;
+  background-image: url('mark/iitkanpur.png');
+  background-size: cover;
+  background-position: center;
+  color: #f4f4f4;
+  font-size: 7.7rem;
+  border-radius: 30px 30px 30px 30px;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(4px); /* Blur effect */
+  background-color: rgba(0, 0, 0, 0.3); /* Slight dark overlay for contrast */
+  mix-blend-mode: multiply;
+  z-index: 0;
+}
+header * {
+  position: relative;
+  z-index: 1;
+}
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 3px;
+}
+header p {
+  font-size: 1.5rem;
+}
+/* Greeting and Date */
+#greeting, #date {
+  font-size: 2.5rem; /* or 1rem, or 14px depending on what you prefer */
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.color{
+  color: rgb(74, 74, 228);
+  font-size: 2.8rem;
+  font-family:  Georgia, 'Times New Roman', Times, serif;;
+}
+.color1{
+  color: #f6f6f7;
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.profile {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 20px auto;
+  display: block;
+  border: 6px solid #bb365577;
+  box-shadow: 0 4px 12px rgba(122, 84, 84, 0.2);
+}
+/* Resume Section */
+section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f7f9fc;
+  border-bottom: 1px solid #ddd;
+}
+
+#profile-section {
+  background-color: #f9fdfd;
+}
+.table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.blog-section {
+  background-color: rgb(196, 101, 185);
+  padding: 4rem 0;
+}
+
+.blog-section .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.blog-section h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+.blog-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.blog-card {
+  background-color: #fdfdfd;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 auto;
+}
+
+.blog-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: #111;
+}
+
+.blog-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+#projects-section {
+  background-color: #f9f7f9;
+  color:white;
+}
+.contact-section {
+    background-color: #3c393c;
+    padding: 4rem 0;
+    text-align: center;
+  }
+  
+  .contact-section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #fefafa;
+  }
+  
+  .contact-section p {
+    font-size: 1rem;
+    color: #f0ebeb;
+    margin-bottom: 1.5rem;
+  }
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .social-btn {
+    background-color: hsl(223, 78%, 51%);
+    color: #fff;
+    padding: 0.7rem 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+  .social-btn:hover {
+    background-color: #3a25d8;
+  }
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.project-card {
+  background-color: rgb(185, 95, 174);
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 10px;
+  width: 80%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+section h2 {
+  margin-bottom: 20px;
+  color: #007acc;
+}
+
+section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #faf9f9;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  header p, #greeting, #date {
+    font-size: 1rem;
+  }
+}
