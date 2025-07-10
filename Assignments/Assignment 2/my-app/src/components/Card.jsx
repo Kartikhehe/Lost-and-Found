@@ -18,7 +18,7 @@ function Card({ id, title, description, image, location, date, contact, status, 
     const confirmDelete = window.confirm(`Are you sure you want to delete "${title}"?`);
     if (!confirmDelete) return;
   
-    fetch(`http://localhost:3001/items/${id}`, {
+    fetch(`http://localhost:3000/items/${id}`, {
       method: 'DELETE',
     })
       .then((res) => {
@@ -33,7 +33,7 @@ function Card({ id, title, description, image, location, date, contact, status, 
 
   const handleSave = async (updatedData) => {
     try {
-      const res = await fetch(`http://localhost:3001/items/${updatedData.id}`, {
+      const res = await fetch(`http://localhost:3000/items/${updatedData.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
