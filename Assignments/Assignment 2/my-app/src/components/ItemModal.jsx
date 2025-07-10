@@ -66,8 +66,8 @@ function ItemModal({ initialData = {}, onClose, onSave }) {
   
     const isEdit = !!formData.id;
     const endpoint = isEdit
-      ? `http://localhost:3001/items/${formData.id}`
-      : `http://localhost:3001/items`;
+      ? `http://localhost:3000/items/${formData.id}`
+      : `http://localhost:3000/items`;
   
     const method = isEdit ? 'PUT' : 'POST';
   
