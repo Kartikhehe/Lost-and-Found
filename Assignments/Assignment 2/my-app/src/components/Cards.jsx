@@ -14,7 +14,7 @@ function Cards() {
   const [items, setItems] = useState([]);
 
 useEffect(() => {
-  fetch('http://localhost:3001/items')
+  fetch('http://localhost:3000/items')
     .then((res) => res.json())
     .then((data) => setItems(data))
     .catch((err) => console.error("Failed to fetch items:", err));
