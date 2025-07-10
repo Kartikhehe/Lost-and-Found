@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "title": "Smartwatch",
+    "description": "Found black smartwatch near parking.",
+    "location": "North Parking Lot",
+    "dateFound": "07/06/2025",
+    "contact": "finder123@example.com",
+    "image": "https://images.unsplash.com/photo-1668069225941-37356a72faac?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "status": "found"
+  },
+  {
+    "id": 2,
+    "title": "Reading Glasses",
+    "description": "Left brown glasses case with prescription lenses.",
+    "location": "Science Block",
+    "dateLost": "30/05/2025",
+    "contact": "glasses.help@email.com",
+    "image": "https://images.unsplash.com/photo-1603578119639-798b8413d8d7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "status": "lost"
+  },
+  {
+    "id": 3,
+    "title": "Bag",
+    "description": "Black laptop bag found on bench near Gate 1.",
+    "location": "Main Entrance",
+    "dateFound": "02/06/2025",
+    "contact": "security@campus.com",
+    "image": "https://images.unsplash.com/photo-1585501954260-372cec60d355?q=80&w=1978&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "status": "found"
+  },
+  {
+    "id": 4,
+    "title": "Backpack",
+    "description": "Lost grey backpack with textbooks and laptop.",
+    "location": "Bus Stop Gate 2",
+    "dateLost": "03/06/2025",
+    "contact": "kevin@domain.com",
+    "image": "https://images.unsplash.com/photo-1591534577302-1696205bb2bc?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "status": "lost"
+  },
+  {
+    "id": 5,
+    "title": "Set of Keys",
+    "description": "Red tag keychain found near library.",
+    "location": "Library Entrance",
+    "dateFound": "06/06/2025",
+    "contact": "someone@example.com",
+    "image": "https://images.unsplash.com/photo-1687075430355-ed8df51c1670?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "status": "found"
+  },
+  {
+    "id": 6,
+    "title": "Scarf",
+    "description": "Woolen red scarf, handmade, very sentimental.",
+    "location": "Bus Stop Main Gate",
+    "dateLost": "07/06/2025",
+    "contact": "wearables@help.com",
+    "image": "https://images.unsplash.com/photo-1676895942047-c2315b83f30b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "status": "lost"
+  },
+  {
+    "id": 7,
+    "title": "Water Bottle",
+    "description": "Green sipper bottle found near the gym.",
+    "location": "Fitness Center",
+    "dateFound": "04/06/2025",
+    "contact": "bottle@college.edu",
+    "image": "https://images.unsplash.com/photo-1633354557397-33ee5af54117?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "status": "found"
+  },
+  {
+    "id": 8,
+    "title": "Notebook",
+    "description": "Spiral notebook with math notes and a pen.",
+    "location": "Cafeteria Table 4",
+    "dateLost": "01/06/2025",
+    "contact": "notes@schoolmail.com",
+    "image": "https://plus.unsplash.com/premium_photo-1684332005387-09423f85bdbb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "status": "lost"
+  },
+  {
+    "id": 9,
+    "title": "Calculator",
+    "description": "Casio calculator found in Exam Hall C.",
+    "location": "Exam Hall C",
+    "dateFound": "05/06/2025",
+    "contact": "exam@college.com",
+    "image": "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "status": "found"
+  },
+  {
+    "id": 10,
+    "title": "Blue Umbrella",
+    "description": "Forgotten blue umbrella in lecture hall B12.",
+    "location": "Lecture Hall B12",
+    "dateLost": "05/06/2025",
+    "contact": "jane@example.com",
+    "image": "https://images.unsplash.com/photo-1604560353366-28e44ad06afe?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "status": "lost"
+  },
+  {
+    "id": 11,
+    "title": "Sweater",
+    "description": "Grey woolen sweater found in Classroom A2.",
+    "location": "Classroom A2",
+    "dateFound": "05/06/2025",
+    "contact": "found@campus.edu",
+    "image": "https://images.unsplash.com/photo-1631541909061-71e349d1f203?q=80&w=1905&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "status": "found"
+  },
+  {
+    "id": 12,
+    "title": "Water Bottle",
+    "description": "Blue steel water bottle with name sticker.",
+    "location": "Gym Hall",
+    "dateLost": "04/06/2025",
+    "contact": "contact@user.com",
+    "image": "https://images.unsplash.com/photo-1555971133-7304ef479e0d?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "status": "lost"
+  },
+  {
+    "id": 13,
+    "title": "ID Card",
+    "description": "Student ID card found in restroom.",
+    "location": "Block B Restroom",
+    "dateFound": "03/06/2025",
+    "contact": "idreturn@university.com",
+    "image": "https://images.unsplash.com/photo-1623795457671-600b1223c2db?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "status": "found"
+  },
+  {
+    "id": 14,
+    "title": "Scientific Calculator",
+    "description": "Lost Casio FX-991EX calculator during exams.",
+    "location": "Exam Hall A",
+    "dateLost": "02/06/2025",
+    "contact": "student@college.com",
+    "image": "https://images.unsplash.com/photo-1574607383077-47ddc2dc51c4?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "status": "lost"
+  },
+  {
+    "id": 15,
+    "title": "Headphones",
+    "description": "Black Sony headphones in a zipped pouch.",
+    "location": "Library Study Area",
+    "dateLost": "05/06/2025",
+    "contact": "audio@finder.com",
+    "image": "https://images.unsplash.com/photo-1664865466153-0a39d69e1a59?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "status": "lost"
+  },
+  {
+    "id": 16,
+    "title": "Gloves",
+    "description": "Pair of black gloves found on bench outside.",
+    "location": "Garden Area",
+    "dateFound": "06/06/2025",
+    "contact": "clothing@lostfound.org",
+    "image": "https://images.unsplash.com/photo-1683183191020-cf86f3d45db3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "status": "found"
+  },
+  {
+    "id": 17,
+    "title": "Black Wallet",
+    "description": "Lost black leather wallet near cafeteria. Contains ID and cash.",
+    "location": "Campus Cafeteria",
+    "dateLost": "01/06/2025",
+    "contact": "john.doe@email.com",
+    "image": "https://images.unsplash.com/photo-1632274472670-ff46dbd6d6fd?q=80&w=3165&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "status": "lost"
+  },
+  {
+    "id": 18,
+    "title": "Pencil Case",
+    "description": "Zipped black pencil case found in classroom.",
+    "location": "Block C - Room 203",
+    "dateFound": "01/06/2025",
+    "contact": "stationery@return.com",
+    "image": "https://images.unsplash.com/photo-1632822300275-9867abf24bbe?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "status": "found"
+  },
+  {
+    "id": 19,
+    "title": "iPhone 13",
+    "description": "Lost black iPhone with cracked screen near restroom.",
+    "location": "Main Library",
+    "dateLost": "06/06/2025",
+    "contact": "alice@site.com",
+    "image": "https://images.unsplash.com/photo-1746006084492-24a8fd02710a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "status": "lost"
+  },
+  {
+    "id": 20,
+    "title": "Earrings",
+    "description": "Silver stud earrings found in washroom.",
+    "location": "Admin Block",
+    "dateFound": "04/06/2025",
+    "contact": "lostfound@admin.com",
+    "image": "https://images.unsplash.com/photo-1591241193546-8c6823c3958a?q=80&w=2032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "status": "found"
+  }
+]
