@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Form</title>
+  <link rel="stylesheet" href="dashlost.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="login-box">
+      <div class="avatar">
+        <img src="image.png" alt="User Avatar" />
+      </div>
+      <h2>Login here!!</h2>
+      <form>
+        <label for="username">Username *</label>
+        <input type="text" id="username" placeholder="Enter your Username" required />
+
+        <label for="password">Password *</label>
+        <input type="password" id="password" placeholder="Enter your Password" required />
+
+        <div class="remember">
+          <input type="checkbox" id="remember" />
+          <label for="remember">Remember me</label>
+        </div>
+
+        <button type="submit">Login</button>
+
+        <div class="footer-links">
+          <a href="#">Forgot password?</a>
+          <a href="#" onclick="register()">Don’t have an account? Register</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
