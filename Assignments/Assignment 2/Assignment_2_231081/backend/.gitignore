@@ -1,0 +1,45 @@
+# Node modules
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# IDE settings (optional)
+.vscode/
+.idea/
+*.swp
+
+# React file uploads or temp files
+*.local
+.cache/
+coverage/
+*.tgz
+
+# Optional for Cloudinary or media uploads
+uploads/
+public/uploads/
+
+# Testing
+jest-test-results.json
+coverage/
+
+# Lock files (optional, depending on team)
+# pa
