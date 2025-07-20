@@ -2,8 +2,7 @@ import { Modal, Box, TextField } from "@mui/material";
 import Input from "./Input";
 import { Button } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import { useState, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useRef, useEffect } from "react";
 
 const style = {
   position: "absolute",
@@ -32,19 +31,22 @@ const VisuallyHiddenInput = styled("input")({
   width: 1,
 });
 
-export default function Popup({ open, handleClose, heading }) {
-  // const navigate = useNavigate();
+export default function EditPopup({
+  imgURL,
+  open,
+  handleClose,
+  heading,
+  details,
+}) {
   const formRef = useRef(null);
-  const [file, setFile] = useState(null);
-  const [url, setURL] = useState("");
+  const [url, setURL] = useState(imgURL);
 
-  // const handleFileChange = async (e) => {
-  //   const selectedFile = e.target.files[0];
-  //   if (selectedFile) setFile(selectedFile);
-
-  //   const uploadedUrl = await handleUpload();
-  //   setURL(uploadedUrl);
-  // };
+  useEffect(() => {
+    if (details && details.img) {
+      setURL(details.img);
+    }
+  }, [details]);
+  //   console.log(details.img);
 
   const handleUpload = async (event) => {
     const file = event.target.files[0];
@@ -85,7 +87,7 @@ export default function Popup({ open, handleClose, heading }) {
   };
 
   let status;
-  if (heading === "REPORT FOUND ITEM") status = "Found";
+  if (heading === "Update Found Item") status = "Found";
   else status = "Lost";
 
   return (
@@ -108,29 +110,37 @@ export default function Popup({ open, handleClose, heading }) {
             }}
             ref={formRef}
             onSubmit={async (e) => {
-              // e.preventDefault();
+              //   e.preventDefault();
 
               const formData = new FormData(formRef.current);
               const formValues = Object.fromEntries(formData);
-              formValues["status"] = status;
 
               console.log("Form values before POST:", formValues);
 
-              const res = await fetch("http://localhost:5000/items", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(formValues),
-              });
+              const res = await fetch(
+                `http://localhost:5000/items/${details.id}`,
+                {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify(formValues),
+                }
+              );
 
               let data;
               try {
-                data = await res.json();
+                const contentType = res.headers.get("content-type") || "";
+                if (contentType.includes("application/json")) {
+                  data = await res.json();
+                } else {
+                  throw new Error("Not JSON");
+                }
               } catch (err) {
                 const fallbackText = await res.text();
                 console.error("❌ Could not parse JSON:", fallbackText);
                 alert("❌ Server didn't return valid JSON.");
                 return;
               }
+
               handleClose();
             }}
           >
@@ -139,24 +149,29 @@ export default function Popup({ open, handleClose, heading }) {
               name="itemName"
               label="Item name"
               type="text"
+              defaultValue={details.item_name}
+              InputLabelProps={{ shrink: true }}
             />
             <Input
               style={{ height: "40px" }}
               name="location"
               label="Location"
               type="text"
+              value={details.place}
             />
             <Input
               style={{ height: "40px" }}
               name="personName"
               label="Your name"
               type="text"
+              value={details.person_name}
             />
             <Input
               style={{ height: "40px" }}
               name="phone"
               label="Phone number"
               type="text"
+              value={details.phone}
             />
             <TextField
               id="outlined-multiline-flexible"
@@ -164,6 +179,7 @@ export default function Popup({ open, handleClose, heading }) {
               multiline
               maxRows={4}
               name="details"
+              value={details.details}
             />
             <div
               style={{
