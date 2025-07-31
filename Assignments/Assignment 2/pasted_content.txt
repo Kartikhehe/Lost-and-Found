@@ -1,0 +1,795 @@
+lost.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lost & Found Portal</title>
+  <link rel="stylesheet" href="lost.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">🧭 Lost & Found</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Blog</a>
+      <a href="#">Lost</a>
+      <a href="#">Found</a>
+      <a href="#">Contact</a>
+      <a href="#">About us</a>
+    </nav>
+    <button class="login-btn" onclick="login()">Login</button>
+  </header>
+
+  <section class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search items or locations..." />
+    <button onclick="searchItems()">🔍</button>
+  </section>
+
+
+
+  <section class="filters">
+  <button onclick="filterStatus('all')">All</button>
+  <button onclick="filterStatus('found')">✅ Found</button>
+  <button onclick="filterStatus('lost')">❌ Lost</button>
+
+  <select id="categoryFilter" onchange="filterCategory()">
+    <option value="all">All Categories</option>
+    <option value="electronics">electronics</option>
+    <option value="accessories">accessories</option>
+    <option value="books">Books</option>
+  </select>
+</section>
+
+
+
+
+  <main class="grid-container" id="cardContainer">
+    <!-- Card Example -->
+   <div class="card found" 
+     data-name="Airpods" 
+     data-location="library" 
+     data-category="electronics">
+
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiRGzSWrZbvY1oaGQ_kd2vyy6lTzNPgzky8A&s"   alt="Airpods" />
+  <div class="card-body">
+    <h2>Airpods</h2>
+    <p> Boat Airpods found at 2nd floor of library.</p>
+    <p><strong>Location:</strong> Right side of 2nd floor </p>
+    <p><strong>Date:</strong> 08/07/2025</p>
+    <p><strong>Contact:</strong> <a href="mailto:founder@iitk.com.com">founder@iit.com</a></p>
+    <p><strong>Category:</strong> <span class="category-tag">electronics</span></p>
+     <span class="badge found-badge">✅ Found</span>
+
+    <div class="card-actions">
+      <button class="btn edit">Edit</button>
+      <button class="btn delete">Delete</button>
+    </div>
+  </div>
+</div>
+
+
+
+   <div class="card lost" 
+     data-name="cycle" 
+     data-location="library" 
+     data-category="accessories">
+
+  <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202103/IMG_20210326_181312_1200x768.jpeg?size=690:388" alt="cycle" />
+  <div class="card-body">
+    <h2>Cycle</h2>
+    <p>Cycle(HERO) of grey colour  is lost from hall 10 canteen</p>
+    <p><strong>Location:</strong> Hall 10</p>
+    <p><strong>Date:</strong> 5/07/2025</p>
+    <p><strong>Contact:</strong> <a href="mailto:security_help@iit.com">security_help@iit.com</a></p>
+    <p><strong>Category:</strong> <span class="category-tag">accessories</span></p>
+    <span class="badge lost-badge">❌ Lost</span>
+
+    <div class="card-actions">
+      <button class="btn edit">Edit</button>
+      <button class="btn delete">Delete</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="card found" 
+     data-name="Mobile phone" 
+     data-location="L 20" 
+     data-category="electronics">
+
+  <img src="https://i.pcmag.com/imagery/reviews/01UegEoFfj27rIbEM7VNtuO-1.fit_lim.size_298x174.v1744139698.jpg" alt="Mobile phone" />
+  <div class="card-body">
+    <h2>Mobile phone </h2>
+    <p>Mobile Phone found (realme) found in L 20.</p>
+    <p><strong>Location:</strong> L 20</p>
+    <p><strong>Date:</strong> 06/07/2025</p>
+    <p><strong>Contact:</strong> <a href="mailto:founder.iitk@email.com">founder.iitk@email.com</a></p>
+    <p><strong>Category:</strong> <span class="category-tag">electronics</span></p>
+    <span class="badge found-badge">✅ Found</span>
+
+    <div class="card-actions">
+      <button class="btn edit">Edit</button>
+      <button class="btn delete">Delete</button>
+    </div>
+  </div>
+</div>
+  </main>
+
+    <main class="grid-container" id="cardContainer">
+    <!-- Card Example -->
+    <div class="card found" 
+     data-name="key" 
+     data-location="Near DOAA canteen" 
+     data-category="accessories">
+
+  <img src="https://www.hallslocksmiths.co.uk/wp-content/uploads/Copy-of-Unnamed-Design-7-1080x628.png" alt="key" />
+  <div class="card-body">
+    <h2>Key</h2>
+    <p>Bunch of key found near DOAA cantten.</p>
+    <p><strong>Location:</strong> DOAA canteen</p>
+    <p><strong>Date:</strong> 07/06/2025</p>
+    <p><strong>Contact:</strong> <a href="mailto:finder123@example.com">finder123@example.com</a></p>
+    <p><strong>Category:</strong> <span class="category-tag">electronics</span></p>
+    <span class="badge found-badge">✅Found</span>
+
+    <div class="card-actions">
+      <button class="btn edit">Edit</button>
+      <button class="btn delete">Delete</button>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+<div class="card found" 
+     data-name="smartwatch" 
+     data-location="north parking lot" 
+     data-category="electronics">
+
+  <img src="id.jpg" alt="Idcard" />
+  <div class="card-body">
+    <h2>Id card</h2>
+    <p>IIT Kanpur Id.card found at stair of OAT.</p>
+    <p><strong>Location:</strong> OAT</p>
+    <p><strong>Date:</strong> 09/07/2025</p>
+    <p><strong>Contact:</strong> <a href="mailto:fonder878@example.com">fonder878@example.com</a></p>
+    <p><strong>Category:</strong> <span class="category-tag">electronics</span></p>
+    <span class="badge found-badge">✅ Found</span>
+
+    <div class="card-actions">
+      <button class="btn edit">Edit</button>
+      <button class="btn delete">Delete</button>
+    </div>
+  </div>
+</div>
+
+
+    
+
+<div class="card lost" 
+     data-name="Water bottle" 
+     data-location="Library" 
+     data-category="accessories">
+
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE18-V4F_9K7LNokSYMQmpBZ6b19MZM7rGuQ&s" alt="Water bottle" />
+  <div class="card-body">
+    <h2>Water bottle</h2>
+    <p>Pink Water bottle find in NCL in CC-02.</p>
+    <p><strong>Location:</strong> NCL</p>
+    <p><strong>Date:</strong> 30/06/2025</p>
+    <p><strong>Contact:</strong> <a href="mailto:abcdef.iitk@email.com">abcdef.iitk@email.com</a></p>
+    <p><strong>Category:</strong> <span class="category-tag">accessories</span></p>
+    <span class="badge lost-badge">❌ Lost</span>
+
+    <div class="card-actions">
+      <button class="btn edit">Edit</button>
+      <button class="btn delete">Delete</button>
+    </div>
+  </div>
+</div>
+
+  </main>
+
+  <!-- Add Button -->
+<button class="add-btn" onclick="openModal()">➕ Add New Item</button>
+
+<!-- Modal Form -->
+<div id="itemModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Add New Item</h2>
+    <form id="itemForm">
+      <input type="text" placeholder="Item Name *" required />
+      <input type="text" placeholder="Location *" required />
+      <input type="date" placeholder="Date Found/Lost" required />
+      <input type="email" placeholder="Contact Email *" required />
+      <input type="text" placeholder="Image URL" />
+      <select required>
+        <option value="">Select Category</option>
+        <option value="electronics">Electronics</option>
+        <option value="accessories">Accessories</option>
+        <option value="books">Books</option>
+      </select>
+      <select required>
+        <option value="">Status</option>
+        <option value="found">✅ Found</option>
+        <option value="lost">❌ Lost</option>
+      </select>
+      <textarea placeholder="Description (optional)"></textarea>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+</div>
+
+
+
+
+  <script src="lost.js"></script>
+</body>
+</html>    
+lost.css
+:root {
+  --primary: #0057b7;
+  --found: #28a745;
+  --lost: #dc3545;
+  --bg: #f2f4f8;
+  --card-bg: #fff;
+  --text: #333;
+}
+
+
+body {
+ background-image: url("data:image/jpeg;base64,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");
+ background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+
+header {
+  background: #111;
+  color: rgb(244, 241, 241);
+  display: flex;
+  justify-content: space-between;
+  align-items: right;
+  font-size: 25px;
+  padding: 15px 40px;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+  text-align: right;
+}
+
+.login-btn {
+  background: transparent;
+  border: 1px solid white;
+  padding: 6px 12px;
+  color: white;
+  border-radius: 6px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  gap: 10px;
+}
+
+.search-bar input {
+  width: 40%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 20px;;
+}
+
+.search-bar button {
+  padding: 12px 18px;
+  background: sky blueviolet;
+  color: rgb(117, 206, 66);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px auto;
+  flex-wrap: wrap;
+}
+
+.filters button,
+.filters select {
+  padding: 10px 16px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #dc2d2d;
+  background-color: #2f87da;
+  font-size: 20px;
+  color: #f7f5f5;
+  cursor: pointer;
+}
+
+.filters button:hover,
+.filters select:hover {
+  background-color: #290bad;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  padding: 40px;
+}
+
+
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  overflow: visible;
+  
+  background-color: #faf3f3;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: auto; /* Let it scale proportionally */
+  object-fit: cover; /* Makes it look neat without distortion */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  max-height: 400px; /* Optional: cap height */
+}
+
+
+.card-body {
+  padding: 20px;
+
+font-size: 30px;
+
+}
+
+.card-body h2 {
+  margin: 0 0 10px;
+  font-size: 35px;
+}
+.category-tag {
+  background-color: hsl(0, 20%, 98%);
+  color: rgb(16, 16, 16);
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 25px;
+  margin-left: 5px;
+}
+
+
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 20px;
+  border-radius: 20px;
+  margin-top: 10px;
+  color: white;
+}
+
+.found-badge {
+  background-color: var(--found);
+  display: block;            /* Make it take up space */
+  margin: 10px auto;         /* Center it horizontally */
+  width: 90px;        /* Adjust width to content, or set fixed width below */
+  padding: 6px 20px;         /* Increase horizontal size */
+  font-size: 20px;
+  text-align: center;
+  border-radius: 20px;
+  font-weight: 700;
+}
+
+
+.lost-badge {
+  background-color: var(--lost);
+    display: block;            /* Make it take up space */
+  margin: 10px auto;         /* Center it horizontally */
+  width: 90px;        /* Adjust width to content, or set fixed width below */
+  padding: 6px 20px;         /* Increase horizontal size */
+  font-size: 20px;
+  text-align: center;
+  border-radius: 20px;
+  font-weight: 600;
+  
+}
+
+.card-actions {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 15px;
+}
+
+
+.btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.edit {
+  background-color: #ffc107;
+  color: #000;
+  font-size: 20px;
+}
+
+.delete {
+  background-color: var(--lost);
+  color: white;
+  margin-left: auto; 
+  font-size: 20px;
+}
+
+
+.add-btn {
+  margin: 30px auto;
+  display: block;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  font-size: 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  padding: 10px 0;
+  width: 200px;
+  text-align: center;
+  z-index: 999;
+}
+
+.dropdown a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.dropdown a:hover {
+  background-color: #f0f0f0;
+}
+
+.hidden {
+  display: none;
+}
+/* Modal Background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal Content */
+.modal-content {
+  background: #fff;
+  margin: 8% auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #444;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Form Styles */
+#itemForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#itemForm input,
+#itemForm select,
+#itemForm textarea {
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+#itemForm textarea {
+  resize: vertical;
+}
+
+.submit-btn {
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  font-size: 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}  
+lost.js
+function searchItems() {
+  const query = document.getElementById("searchInput").value.toLowerCase();
+  const cards = document.querySelectorAll(".card");
+
+  cards.forEach(card => {
+    const name = card.getAttribute("data-name");
+    const location = card.getAttribute("data-location");
+
+    if (name.includes(query) || location.includes(query)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+function filterStatus(status) {
+  const cards = document.querySelectorAll(".card");
+  cards.forEach(card => {
+    const isFound = card.classList.contains("found");
+    const isLost = card.classList.contains("lost");
+
+    if (
+      status === "all" ||
+      (status === "found" && isFound) ||
+      (status === "lost" && isLost)
+    ) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+
+function filterCategory() {
+  const selected = document.getElementById("categoryFilter").value;
+  const cards = document.querySelectorAll(".card");
+
+  cards.forEach(card => {
+    const category = card.getAttribute("data-category");
+    if (selected === "all" || selected === category) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+function login() {
+  window.location.href = "dashlost1.html";
+}
+function register() {
+  window.location.href = "dashlost2.html";
+}
+function toggleDropdown() {
+  const dropdown = document.getElementById("dropdown-menu");
+  dropdown.classList.toggle("hidden");
+}
+
+function addItem(type) {
+  alert("You clicked to add a " + type + " item!");
+  // You can redirect or open a form modal here
+  // Example: window.location.href = `add.html?type=${type}`;
+}
+function openModal() {
+  document.getElementById("itemModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("itemModal").style.display = "none";
+}
+
+// Optional: Close modal when clicking outside the content
+window.onclick = function (event) {
+  const modal = document.getElementById("itemModal");
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+dashlost1.html
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Form</title>
+  <link rel="stylesheet" href="dashlost.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="login-box">
+      <div class="avatar">
+        <img src="image.png" alt="User Avatar" />
+      </div>
+      <h2>Login here!!</h2>
+      <form>
+        <label for="username">Username *</label>
+        <input type="text" id="username" placeholder="Enter your Username" required />
+
+        <label for="password">Password *</label>
+        <input type="password" id="password" placeholder="Enter your Password" required />
+
+        <div class="remember">
+          <input type="checkbox" id="remember" />
+          <label for="remember">Remember me</label>
+        </div>
+
+        <button type="submit">Login</button>
+
+        <div class="footer-links">
+          <a href="#">Forgot password?</a>
+          <a href="#" onclick="register()">Don’t have an account? Register</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html> 
+dashlost2.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Form</title>
+  <link rel="stylesheet" href="dashlost.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="login-box">
+      <div class="avatar">
+        <img src="image.png" alt="User Avatar" />
+      </div>
+      <h2>Register here!!</h2>
+      <form>
+        <label for="username">Username *</label>
+        <input type="text" id="username" placeholder="Enter your Username" required />
+
+        <label for="password">Password *</label>
+        <input type="password" id="password" placeholder="Enter your Password" required />
+
+        <div class="remember">
+          <input type="checkbox" id="remember" />
+          <label for="remember">Remember me</label>
+        </div>
+
+        <button type="submit">Register</button>
+
+        <div class="footer-links">
+          <a href="#">Forgot password?</a>
+          <a href="#" onclick="login()">Don’t have an account?login!</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
+dashlost.css
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.login-container {
+  background-color: #e2d6d6;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+a {
+  color: red;
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 12px;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+this is the whole code of my on of the project but my mentor told me to only use html css java script use react in this project so canyou please help me how can i chamge it and do it with react please tell me step by step 
+
