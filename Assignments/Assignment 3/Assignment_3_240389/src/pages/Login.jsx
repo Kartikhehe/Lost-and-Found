@@ -29,7 +29,7 @@ function Login() {
       className="d-flex justify-content-center align-items-center min-vh-100 bg-light p-3"
       style={{
         backgroundColor: '#f1f1f1',
-        backgroundImage: 'url(http://www.transparenttextures.com/patterns/diagmonds-light.png)'
+        backgroundImage: 'url(https://www.transparenttextures.com/patterns/diagmonds-light.png)'
       }}
     >
       <div className="card shadow-lg p-4 rounded-4 w-100" style={{ maxWidth: '420px' }}>
