@@ -12,6 +12,7 @@ app.use(cors({
     origin: 'https://lostandfoundfarhan.netlify.app',
     credentials: true
   }));
+app.use(express.json());
 
 const pool = new Pool({
     user: process.env.DB_USER,
