@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class = "container">
+    <div class = "time">
+    <h1 id = "day">Good Morning</h1>
+    <h1 id = "datetime">Date and Time</h1>
+    </div>
+    
+    <div class = "about">
+    <h2>About Me</h2>
+    <hr>
+    
+    <h2>Soumya Jhunjhunwala</h2>
+    <div class = "container_about">
+    <img src = 'images/myphoto.jpeg'/>
+    <p>I am a first year unergrad at Indian Institute of Technology, Kanpur persuing B.TECH in Mechanical Enginnering. I have a deep interest in mathematics, machine learning, and finance, with growing experience in algorithm trading, deep learning.</p>
+    </div>
+    </div>
+    <div class = "EB">
+    <h2>Education Background</h2>
+    <hr/>
+    <h4>Bachelor of Technology in Mechanical Engineering</h4>
+    <p>
+        Indian Institute of Technology, Kanpur
+        <br>2024-2028
+    </p>
+    </div>
+    <div class = "skill">
+    <h2>Skills</h2>
+    <hr>
+    <ul>
+        <li>
+            <h3>Programming Languages</h3>
+            <p>Python, C++</p>
+        </li>
+        <li>
+            <h3>Technical Skills</h3>
+            <p>Supervised Machine Learning, Reinforcement Learning, Deep Learning, Algorithm Trading</p>         
+        </li>
+    </ul>
+    </div>
+    <div class = "hobbies">
+    <h2>Hobbies</h2>
+    <hr>
+    <div class = "container_hobbies">
+    <div class = "badminton">
+    <img src = 'images/badminton.jpg' id = "badminton"/><br/>
+    <p id = "badminton_text">Playing Badminton</p>
+    </div>
+    <div class = "guitar"> 
+    <img src = './images/guitar.jpeg' id = "guitar"/>
+    <p id = "guitar_text">Playing Guitar</p>
+    </div>
+    <div>
+        <img src = 'images/book.jpeg' id = "book"/>
+        <p id = "book_text">Reading Books</p>
+    </div>
+    </div>
+
+    
+    </div>
+    <div class = "contact">
+    <h2>Contact Details</h2>
+    <hr>
+    <ul>
+        <li>
+            <p><b>Phone no : </b>9678004887</p>
+
+        </li>
+        <li>
+            <p><b>Email Id : </b>soumyajh24@iitk.ac.in</p>
+        </li>
+    </ul>
+    </div>
+    </div>
+    <script>
+        const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+        let d = new Date() 
+        let hour = d.getHours();
+        if(hour < 12){
+            document.getElementById("day").innerHTML = "Good Morning";
+        }
+        else if(hour < 17){
+            document.getElementById("day").innerHTML = "Good Afternoon";
+        }
+        else{
+            document.getElementById("day").innerHTML = "Good Evening";
+        }
+        let day = weekday[d.getDay()];
+        let month = d.getMonth() + 1
+        let date = d.getDate();
+        document.getElementById("datetime").innerHTML = d;
+        document.getElementById("datetime").innerHTML = day + ", "+ date + "/" + month + "/" + d.getFullYear();
+        
+
+
+    </script>
+</body>
+</html>

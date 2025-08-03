@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe - Web Developer</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        /* Header styles */
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+            border-radius: 8px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .date {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #ecf0f1;
+        }
+        
+        /* Profile section */
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #2c3e50;
+        }
+        
+        /* Section styles */
+        section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        /* Skills section */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .skill {
+            background-color: #3498db;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        /* Hobbies section */
+        .hobbies-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .hobby {
+            text-align: center;
+            width: 120px;
+        }
+        
+        .hobby-img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+        
+        /* Contact section */
+        .contact-list {
+            list-style-type: none;
+        }
+        
+        .contact-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-list i {
+            margin-right: 10px;
+            color: #2c3e50;
+            width: 20px;
+            text-align: center;
+        }
+        
+        /* Divider */
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #ecf0f1;
+            margin: 20px 0;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .profile {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .hobbies-container {
+                justify-content: center;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1 id="greeting">Good Morning</h1>
+        <div class="date" id="current-date">Tuesday, April 23, 2024</div>
+    </header>
+    
+    <section class="profile">
+        <img src="https://wallpapers.com/images/high/anime-girl-profile-pictures-ri13vnr0adoq58sp.webp" alt="Hemakshi Kumawat" class="profile-img">
+        <div>
+            <h2>About Me</h2>
+            <p>I am Hemakshi Kumawat, a first year student at IIT Kanpur. I am from Mumbai, Maharashtra. I have experience in HTML, CSS, and JavaScript. I enjoy solving complex problems and turning ideas into reality through code.</p>
+        </div>
+    </section>
+    
+    <section>
+        <h2>Education</h2>
+        <p><strong>Bachelor of Technology in Computer Science and Engineering</strong></p>
+        <p>Indian Institute of Technology, IIT Kanpur-208016 </p>
+        <p>First year (Y24)</p>
+    </section>
+    
+    <section>
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Python</span>
+            <span class="skill">C++</span>
+            <span class="skill">Git</span>
+            <span class="skill">Machine Learning</span>
+            <span class="skill">Reinforcement learning</span>
+            <span class="skill">Natural Language Processing</span>
+        </div>
+    </section>
+    
+    <section>
+        <h2>Hobbies & Interests</h2>
+        <div class="hobbies-container">
+            <div class="hobby">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxCRseW33JYjmGtqCt2ZsO-98DNqizUlpvDXJ57eXyCuGYxDlat-h2pZzXXVXkgsyuXpA&usqp=CAU" alt="Reading" class="hobby-img">
+                <p>Reading mystery novels</p>
+            </div>
+            <div class="hobby">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ71uhEtQNm_QJwM5wnftXZLrIDiXnuq8SW0g&s" alt="Sketching" class="hobby-img">
+                <p>Sketching</p>
+            </div>
+            <div class="hobby">
+                <img src="https://media.assettype.com/newindianexpress%2F2024-06%2F34b93777-ac61-46cd-a38f-302a074b1e0a%2FROADF.jpg" alt="Skating" class="hobby-img">
+                <p>Skating</p>
+            </div>
+            <div class="hobby">
+                <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Traveling" class="hobby-img">
+                <p>Traveling</p>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <h2>Contact</h2>
+        <ul class="contact-list">
+            <li><i class="fas fa-envelope"></i> hemakshik24@iitk.ac.in</li>
+            <li><i class="fas fa-phone"></i> 8765876335</li>
+            <li><i class="fas fa-map-marker-alt"></i> Kanpur, U.P., India</li>
+            <li>
+                <i class="fas fa-globe"></i> 
+                <a href="https://github.com/hemakshi" target="_blank">GitHub</a> | 
+                <a href="https://linkedin.com/in/hemakshi" target="_blank">LinkedIn</a> | 
+                <a href="https://twitter.com/hemakshi" target="_blank">Twitter</a>
+            </li>
+        </ul>
+    </section>
+
+    <script>
+        // Function to update greeting based on time of day
+        function updateGreeting() {
+            const hour = new Date().getHours();
+            let greeting;
+            
+            if (hour < 12) {
+                greeting = "Good Morning";
+            } else if (hour < 18) {
+                greeting = "Good Afternoon";
+            } else {
+                greeting = "Good Evening";
+            }
+            
+            document.getElementById("greeting").textContent = greeting;
+        }
+        
+        // Function to update current date
+        function updateCurrentDate() {
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const today = new Date();
+            const dateString = today.toLocaleDateString(undefined, options);
+            
+            document.getElementById("current-date").textContent = dateString;
+        }
+        
+        // Initialize functions when page loads
+        window.onload = function() {
+            updateGreeting();
+            updateCurrentDate();
+        };
+    </script>
+</body>
+</html>

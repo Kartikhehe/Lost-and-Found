@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "imgURL": "images/images.jpeg",
+    "itemName": "Keys",
+    "location": "Near Academic Gate 3",
+    "name": "xyz",
+    "contact": 9999999999
+  },
+  {
+    "id": 2,
+    "imgURL": "images/3_4bde5165-92cd-4305-b571-dea21fe6568e.webp",
+    "itemName": "Backpack",
+    "location": "In library",
+    "name": "abc",
+    "contact": 9999999999
+  },
+  {
+    "id": 3,
+    "imgURL": "images/63.webp",
+    "itemName": "Phone",
+    "location": "DOAA Canteen",
+    "name": "pqr",
+    "contact": 9999999999
+  }
+]

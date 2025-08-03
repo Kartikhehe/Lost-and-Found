@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lost And Found</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="nav-box">
+      <h2>Lost And Found</h2>
+      <a href="login.html" id="home-login">Login</a>
+    </div>
+  </div>
+
+  <div class="search-bar">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="text" placeholder="Search items by name..." />
+  </div>
+
+  <div id="item-form" style="display: none;" class="form-container">
+    <h3>Add Lost Item</h3>
+    <input type="text" id="item-name" placeholder="Item Name" required />
+    <input type="text" id="item-location" placeholder="Location" required />
+    <input type="text" id="item-contact" placeholder="Contact Info" required />
+    <input type="file" id="item-image" accept="image/*" />
+    <button onclick="submitItem()">Submit</button>
+  </div>
+
+  <div id="card-container" class="card-container"></div>
+
+  
+  <button id="home-additems">+ ADD ITEM</button>
+
+  
+  <script>
+    document.getElementById("home-additems").addEventListener("click", () => {
+      document.getElementById("item-form").style.display = "block";
+    });
+
+    function submitItem() {
+      const name = document.getElementById("item-name").value;
+      const location = document.getElementById("item-location").value;
+      const contact = document.getElementById("item-contact").value;
+      const imageFile = document.getElementById("item-image").files[0];
+
+      if (!name || !location || !contact) {
+        alert("Please fill all fields.");
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        const card = document.createElement("div");
+        card.classList.add("item-card");
+        card.innerHTML = `
+          <img src="${e.target.result}" alt="${name}" />
+          <h3>${name}</h3>
+          <p><strong>Location:</strong> ${location}</p>
+          <p><strong>Contact:</strong> ${contact}</p>
+          <button onclick="this.parentElement.remove()">DELETE</button>
+          <button onclick="updateItem(this)">UPDATE</button>
+        `;
+        document.getElementById("card-container").appendChild(card);
+        document.getElementById("item-form").style.display = "none";
+        clearForm();
+      };
+      if (imageFile) {
+        reader.readAsDataURL(imageFile);
+      } else {
+        alert("Please select an image.");
+      }
+    }
+
+    function clearForm() {
+      document.getElementById("item-name").value = "";
+      document.getElementById("item-location").value = "";
+      document.getElementById("item-contact").value = "";
+      document.getElementById("item-image").value = "";
+    }
+
+    function updateItem(button) {
+      const card = button.parentElement;
+      const newName = prompt("Update item name:", card.querySelector("h3").textContent);
+      const newLocation = prompt("Update location:", card.querySelectorAll("p")[0].textContent.split(': ')[1]);
+      const newContact = prompt("Update contact:", card.querySelectorAll("p")[1].textContent.split(': ')[1]);
+
+      if (newName) card.querySelector("h3").textContent = newName;
+      if (newLocation) card.querySelectorAll("p")[0].innerHTML = `<strong>Location:</strong> ${newLocation}`;
+      if (newContact) card.querySelectorAll("p")[1].innerHTML = `<strong>Contact:</strong> ${newContact}`;
+    }
+  </script>
+</body>
+</html>

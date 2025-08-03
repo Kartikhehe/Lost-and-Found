@@ -1,0 +1,32 @@
+.search-bar {
+  margin-top: 10px;
+  height: 70px;
+  /* background-color: brown; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-bar input {
+  background-color: rgb(237, 237, 237);
+  width: 800px;
+  height: 50px;
+  padding-left: 10px;
+  font-size: 18px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border: none;
+  outline: none;
+}
+.icon {
+  background-color: rgb(237, 237, 237);
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  padding-left: 10px;
+}
+
+.items {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}

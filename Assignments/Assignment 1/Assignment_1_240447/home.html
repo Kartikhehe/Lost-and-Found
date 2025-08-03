@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lost and Found</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Lost and Found</a>
+      <button class="btn btn-light btn-sm">Login</button>
+    </div>
+  </nav>
+
+  <div class="container my-4">
+    <input type="text" class="form-control mb-4" placeholder="Search items...">
+
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="data:image/jpeg;base64,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" class="card-img-top" alt="Keys">
+          <div class="card-body">
+            <h5 class="card-title">Keys</h5>
+            <p class="card-text">Set of keys with a car key. Found in the parking.</p>
+            <p><strong>Contact:</strong> John Doe<br><strong>Phone:</strong> 123-458-7890</p>
+            <button class="btn btn-danger btn-sm">Delete</button>
+            <button class="btn btn-success btn-sm w-50 ms-1">Update</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="data:image/jpeg;base64,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" class="card-img-top" alt="Backpack">
+          <div class="card-body">
+            <h5 class="card-title">Backpack</h5>
+            <p class="card-text">Black backpack. Found in the library.</p>
+            <p><strong>Contact:</strong> Jane Smith<br><strong>Phone:</strong> 867-654-3210</p>
+            <button class="btn btn-danger btn-sm">Delete</button>
+            <button class="btn btn-success btn-sm w-50 ms-1">Update</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFOtJb2xnY2KjuJBhp391xYDA7QIKgO-pqFg&s" class="card-img-top" alt="Phone">
+          <div class="card-body">
+            <h5 class="card-title">Phone</h5>
+            <p class="card-text">White smartphone. Found in the cafeteria.</p>
+            <p><strong>Contact:</strong> Michael Johnson<br><strong>Phone:</strong> 868-123-4567</p>
+            <button class="btn btn-danger btn-sm">Delete</button>
+            <button class="btn btn-success btn-sm w-50 ms-1">Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-4">
+      <button class="btn btn-primary rounded-pill">+ ADD ITEM</button>
+    </div>
+
+    <footer class="text-center mt-5 small text-muted">
+      &copy; 2025 Hemakshi Kumawat. All rights reserved.
+    </footer>
+  </div>
+
+</body>
+</html>
