@@ -8,16 +8,16 @@ function Footer(){
                 <p>Helping you reconnect with your lost belongings.</p>
               </div>
               <div className="col-md-4">
-                <h5>Project Info</h5>
-                <p className="mb-1">ACA Project: <em>Lost and Found Web Application</em></p>
-                <p className="mb-1">Developed by <strong>Farhan Akther R</strong></p>
-                <p className="mb-0">Mentored by:</p>
-                <ul className="list-unstyled mb-0">
-                  <li>Kartik Raj</li>
-                  <li>Bhukya Vaishnavi</li>
-                  <li>Muskan Kumari</li>
-                  <li>Prakriti Prasad</li>
-                  <li>Stuti Shukla</li>
+                <h5>📘 Project Info</h5>
+                <p><strong>🎓 ACA Project</strong><br /><em>Lost and Found Web Application</em></p>
+                <p><strong>👨‍💻 Developer</strong><br />Farhan Akther R</p>
+                <p><strong>🧑‍🏫 Mentors</strong></p>
+                <ul className="list-unstyled ms-3">
+                  <li>• Kartik Raj</li>
+                  <li>• Bhukya Vaishnavi</li>
+                  <li>• Muskan Kumari</li>
+                  <li>• Prakriti Prasad</li>
+                  <li>• Stuti Shukla</li>
                 </ul>
               </div>
               <div className="col-md-4">
