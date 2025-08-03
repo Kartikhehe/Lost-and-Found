@@ -39,14 +39,17 @@ function Cards() {
     }
   };
 
-useEffect(() => {
-  fetch('http://localhost:3000/items')
-    .then(res => res.json())
-    .then(data => {
-      setItems(data);
-      setFilteredItems([...data]);
-    });
-}, []);
+  useEffect(() => {
+    const baseURL = import.meta.env.VITE_API_URL;
+  
+    fetch(`${baseURL}/items`)
+      .then(res => res.json())
+      .then(data => {
+        setItems(data);
+        setFilteredItems([...data]);
+      })
+      .catch(err => console.error('Failed to fetch items:', err));
+  }, []);
 
 useEffect(() => {
   const filtered = items.filter(item => {
