@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo1.png'
 
-function NavBar({ onResetFilters, onFilterLost, onFilterFound, onToggleMyItems }) {
+function NavBar({ onResetFilters, onFilterLost, onFilterFound }) {
   const token = localStorage.getItem('token');
 
   const handleLogout = () => {
@@ -25,9 +25,6 @@ function NavBar({ onResetFilters, onFilterLost, onFilterFound, onToggleMyItems }
         <div className="d-flex order-lg-3 ms-auto">
           {token ? (
             <>
-            <button onClick={onToggleMyItems} className="btn btn-outline-light me-2">
-              My Items
-            </button>
               <button onClick={handleLogout} className="btn btn-outline-danger">Logout</button>
             </>
           ) : (
