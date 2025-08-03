@@ -6,7 +6,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT;
 
 app.use(cors({ origin: ['http://localhost:5173', 'https://your-frontend.vercel.app'], credentials: true }));
 app.use(express.json());
