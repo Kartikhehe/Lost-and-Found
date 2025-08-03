@@ -31,7 +31,7 @@ function Card({ id, title, description, image, location, date, contact, status, 
   const handleSave = async (updatedData) => {
     try {
       const res = await axiosInstance.put(`/items/${updatedData.id}`, updatedData);
-      onUpdate(res.data); // inform parent
+      onUpdate(res.data);
       setShowEditModal(false);
     } catch (err) {
       alert("Failed to update item");

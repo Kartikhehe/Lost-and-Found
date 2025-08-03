@@ -14,7 +14,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
 
-          {/* You can add protected routes here later */}
+          {/* add protected routes here */}
         </Routes>
       </Router>
     </AuthProvider>

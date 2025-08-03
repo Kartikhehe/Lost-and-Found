@@ -21,7 +21,6 @@ const pool = new Pool({
 
 const JWT_SECRET = process.env.JWT_SECRET || "your-secret-key";
 
-// Middleware to verify JWT token
 function verifyToken(req, res, next) {
     const token = req.headers.authorization?.split(" ")[1];
     if (!token) return res.status(403).json({ error: "Access denied" });
@@ -35,7 +34,6 @@ function verifyToken(req, res, next) {
     }
 }
 
-// AUTH ROUTES
 app.post("/auth/register", async (req, res) => {
   const { name, email, password } = req.body;
   const hashedPassword = await bcrypt.hash(password, 10);
@@ -77,7 +75,6 @@ app.post("/auth/login", async (req, res) => {
     }
 });
 
-// ITEM ROUTES
 app.post('/items', verifyToken, async (req, res) => {
     const { title, description, location, date, contact, status, image } = req.body;
     const user_email = req.user.email;
