@@ -128,12 +128,14 @@ useEffect(() => {
         >
           {showFilters ? 'Hide Filters' : 'Show Filters'}
         </button>
-        <button
-          className="btn btn-outline-secondary ms-3"
-          onClick={() => setShowMyItems(prev => !prev)}
-        >
-          {showMyItems ? 'Show All Items' : 'Show My Items'}
-        </button>
+        {userEmail && (
+          <button
+            className="btn btn-outline-secondary ms-3"
+            onClick={() => setShowMyItems(prev => !prev)}
+          >
+            {showMyItems ? 'Show All Items' : 'Show My Items'}
+          </button>
+        )}
       </div>
 
       {showFilters && (
