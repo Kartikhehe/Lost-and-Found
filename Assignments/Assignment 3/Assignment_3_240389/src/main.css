@@ -1,0 +1,14 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+  background-color: #f1f1f1;
+  background-image: url(http://www.transparenttextures.com/patterns/worn-dots.png);
+}
+input.form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  border-color: #80bdff;
+}
+.card {
+  border: none;
+}
