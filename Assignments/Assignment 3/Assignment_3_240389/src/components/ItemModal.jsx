@@ -68,13 +68,14 @@ function ItemModal({ initialData = {}, onClose, onSave }) {
     if (isSubmitting) return;
     setIsSubmitting(true);
 
-    if (!formData.image) {
+    const isEdit = !!formData.id;
+
+    if (!isEdit && !formData.image) {
       alert("Please upload an image.");
       setIsSubmitting(false);
       return;
     }
 
-    const isEdit = !!formData.id;
     const endpoint = isEdit ? `/items/${formData.id}` : `/items`;
 
     try {
