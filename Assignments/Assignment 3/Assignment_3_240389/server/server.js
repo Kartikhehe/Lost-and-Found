@@ -9,10 +9,9 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(cors({
-  origin: 'https://lostandfoundfarhan.netlify.app/',
-  credentials: true
-}));
-app.use(express.json());
+    origin: 'https://lostandfoundfarhan.netlify.app',
+    credentials: true
+  }));
 
 const pool = new Pool({
     user: process.env.DB_USER,
