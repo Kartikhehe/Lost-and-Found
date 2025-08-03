@@ -16,6 +16,7 @@ function Cards() {
   const [showFilters, setShowFilters] = useState(false);
   const [items, setItems] = useState([]);
   const [filteredItems, setFilteredItems] = useState([]);
+  const [showMyItems, setShowMyItems] = useState(false);
 
   const getUserIdFromToken = () => {
     const token = localStorage.getItem('token');
@@ -41,15 +42,18 @@ function Cards() {
 
   useEffect(() => {
     const baseURL = import.meta.env.VITE_API_URL;
-  
-    fetch(`${baseURL}/items`)
+    const token = localStorage.getItem("token");
+    const endpoint = showMyItems ? `${baseURL}/items/my` : `${baseURL}/items`;
+    const headers = token ? { Authorization: `Bearer ${token}` } : {};
+
+    fetch(endpoint, { headers })
       .then(res => res.json())
       .then(data => {
         setItems(data);
         setFilteredItems([...data]);
       })
       .catch(err => console.error('Failed to fetch items:', err));
-  }, []);
+  }, [showMyItems]);
 
 useEffect(() => {
   const filtered = items.filter(item => {
@@ -123,6 +127,12 @@ useEffect(() => {
           onClick={() => setShowFilters(!showFilters)}
         >
           {showFilters ? 'Hide Filters' : 'Show Filters'}
+        </button>
+        <button
+          className="btn btn-outline-secondary ms-3"
+          onClick={() => setShowMyItems(prev => !prev)}
+        >
+          {showMyItems ? 'Show All Items' : 'Show My Items'}
         </button>
       </div>
 
