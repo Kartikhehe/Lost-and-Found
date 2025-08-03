@@ -7,26 +7,17 @@ function Footer(){
                 <h5>Lost & Found</h5>
                 <p>Helping you reconnect with your lost belongings.</p>
               </div>
-              <div id="contact" className="col-md-4">
-                <h5>Contact Us</h5>
-                <ul className="list-unstyled text-white">
-                  <li>
-                    📍 <strong>Address:</strong><br />
-                    Room No. XYZ, Hall of Residence,<br />
-                    IIT Kanpur, Uttar Pradesh, India
-                  </li>
-                  <li className="mt-3">
-                    📞 <strong>Phone:</strong><br />
-                    <a href="tel:+919847487751" className="text-white text-decoration-none">
-                      +91 9847487751
-                    </a>
-                  </li>
-                  <li className="mt-3">
-                    📧 <strong>Email:</strong><br />
-                    <a href="mailto:farhanr24@iitk.ac.in" className="text-white text-decoration-none">
-                      farhanr24@iitk.ac.in
-                    </a>
-                  </li>
+              <div className="col-md-4">
+                <h5>Project Info</h5>
+                <p className="mb-1">ACA Project: <em>Lost and Found Web Application</em></p>
+                <p className="mb-1">Developed by <strong>Farhan Akther R</strong></p>
+                <p className="mb-0">Mentored by:</p>
+                <ul className="list-unstyled mb-0">
+                  <li>Kartik Raj</li>
+                  <li>Bhukya Vaishnavi</li>
+                  <li>Muskan Kumari</li>
+                  <li>Prakriti Prasad</li>
+                  <li>Stuti Shukla</li>
                 </ul>
               </div>
               <div className="col-md-4">
