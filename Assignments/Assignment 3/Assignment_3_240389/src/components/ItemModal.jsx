@@ -171,7 +171,13 @@ function ItemModal({ initialData = {}, onClose, onSave }) {
 
             <div className="mb-3">
               <label className="form-label">Upload Image</label>
-              <input type="file" accept="image/*" className="form-control" onChange={handleImageUpload} required />
+              <input
+                type="file"
+                accept="image/*"
+                className="form-control"
+                onChange={handleImageUpload}
+                required={!formData.id}
+              />
               {formData.image && (
                 <img
                   src={formData.image}
