@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import axios from '../components/AxiosInstance'; // Update path based on your structure
+import axios from '../components/AxiosInstance';
+import logo from '../assets/logo2.png';
 
 function Register() {
   const [email, setEmail] = useState('');
@@ -34,7 +35,7 @@ function Register() {
       <div className="card shadow-lg p-4 rounded-4 w-100" style={{ maxWidth: '420px' }}>
         <div className="text-center mb-4">
           <img
-            src="src/assets/logo2.png"
+            src={logo}
             alt="Logo"
             className="img-fluid"
             style={{ maxHeight: '100px' }}

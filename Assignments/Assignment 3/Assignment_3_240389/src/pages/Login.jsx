@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import axios from '../components/AxiosInstance'; // Update path based on your structure
-import logo from '../assets/logo2.png'; // or adjust path
+import axios from '../components/AxiosInstance';
+import logo from '../assets/logo2.png';
 
 function Login() {
   const [email, setEmail] = useState('');

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import logo from '../assets/logo1.png'
 
 function NavBar({ onResetFilters, onFilterLost, onFilterFound, onFilterMyItems }) {
   const token = localStorage.getItem('token');
@@ -13,7 +14,7 @@ function NavBar({ onResetFilters, onFilterLost, onFilterFound, onFilterMyItems }
       <div className="container d-flex justify-content-between align-items-center">
         <Link className="navbar-brand d-flex align-items-center" to="/">
           <img
-            src="src/assets/logo1.png"
+            src={logo}
             alt="Logo"
             width="40"
             height="40"
