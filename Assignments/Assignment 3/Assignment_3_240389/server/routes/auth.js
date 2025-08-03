@@ -15,13 +15,24 @@ router.post("/register", async (req, res) => {
 });
 
 router.post("/login", async (req, res) => {
-  const { email, password } = req.body;
-  const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+  try {
+    const { email, password } = req.body;
 
-  if (error) return res.status(401).json({ error: error.message });
+    if (!email || !password) {
+      return res.status(400).json({ error: "Email and password are required" });
+    }
 
-  const token = jwt.sign({ email }, process.env.JWT_SECRET, { expiresIn: "1d" });
-  res.json({ token });
+    const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+
+    if (error) return res.status(401).json({ error: error.message });
+
+    const token = jwt.sign({ email }, process.env.JWT_SECRET, { expiresIn: "1d" });
+
+    res.json({ token });
+  } catch (err) {
+    console.error("Login error:", err);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
 });
 
 module.exports = router;
