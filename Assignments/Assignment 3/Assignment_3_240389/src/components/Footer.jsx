@@ -10,8 +10,8 @@ function Footer(){
               <div className="col-md-4">
                 <h5>📘 Project Info</h5>
                 <p><strong>🎓 ACA Project</strong><br /><em>Lost and Found Web Application</em></p>
-                <p><strong>👨‍💻 Developer</strong><br />Farhan Akther R</p>
-                <p><strong>🧑‍🏫 Mentors</strong></p>
+                <p><strong>👨‍💻 Made by</strong><br />Farhan Akther R</p>
+                <p><strong>🧑‍🏫 Mentored by</strong></p>
                 <ul className="list-unstyled ms-3">
                   <li>• Kartik Raj</li>
                   <li>• Bhukya Vaishnavi</li>
