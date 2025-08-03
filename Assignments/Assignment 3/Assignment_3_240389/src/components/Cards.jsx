@@ -116,7 +116,7 @@ useEffect(() => {
         onResetFilters={handleResetFilters}
         onFilterLost={handleFilterLost}
         onFilterFound={handleFilterFound}
-        onFilterMyItems={handleFilterMyItems}
+        onToggleMyItems={() => setShowMyItems(prev => !prev)}
       />
       
       <SearchBar onSearch={setSearchQuery} />
