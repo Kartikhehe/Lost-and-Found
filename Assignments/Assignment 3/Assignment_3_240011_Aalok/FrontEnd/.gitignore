@@ -1,0 +1,21 @@
+# React build output
+/build
+/.next
+/dist
+
+# Node modules
+node_modules/
+
+# Env files
+.env
+.env.*
+
+# IDE and OS
+.DS_Store
+.vscode/
+.idea/
+
+# Logs and cache
+*.log
+.cache/
+coverage/
